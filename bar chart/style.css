@@ -1,0 +1,17 @@
+body {
+    background: #dac6c6;
+  }
+  svg {
+    background: #dac6c6;
+  }
+  .b1 {
+    fill: rgb(206, 117, 117);
+    stroke-width: 1px;
+    stroke:#c6e7e7;
+  }
+
+  .b2{
+    fill: rgb(83, 85, 235);
+    stroke-width: 1px;
+    stroke:#c6e7e7;
+  }
