@@ -1,5 +1,5 @@
 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-svg.setAttribute("height", `${500}px`);
+svg.setAttribute("height", `${600}px`);
 svg.setAttribute("width", `${600}px`);
 svg.setAttribute("viewBox", `0 0 500 500`);
 let highestvalue = 0 
@@ -81,7 +81,7 @@ function generateChart(data , offset , classname) {
 
   
 const drawhlines = () => {
-    for (let i = 430; i > 200; i -= step) {
+    for (let i = 430; i >= 430-highestvalue; i -= step) {
      const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
 
      const text = document.createElementNS(
@@ -113,9 +113,10 @@ const drawhlines = () => {
 
 document.getElementById("root").appendChild(svg);
 
+drawhlines() ;
 generateChart(year1 , 0, "b1");
 generateChart(year2 , 20 , "b2");
-drawhlines() ;
+
 
 
 const input = document.createElement('input');
@@ -128,9 +129,10 @@ button.addEventListener('click', (e) => {
     
  step = document.getElementById("ScaleInput").value
  svg.innerHTML= ""
+ drawhlines() ;
 generateChart(year1 , 0, "b1");
 generateChart(year2 , 20 , "b2");
-drawhlines() ;
+
 
 });
 
