@@ -116,3 +116,23 @@ document.getElementById("root").appendChild(svg);
 generateChart(year1 , 0, "b1");
 generateChart(year2 , 20 , "b2");
 drawhlines() ;
+
+
+const input = document.createElement('input');
+input.setAttribute("type" , "number") ;
+input.setAttribute("id","ScaleInput")
+const button = document.createElement('button');
+button.innerText = 'change scale';
+
+button.addEventListener('click', (e) => {
+    
+ step = document.getElementById("ScaleInput").value
+ svg.innerHTML= ""
+generateChart(year1 , 0, "b1");
+generateChart(year2 , 20 , "b2");
+drawhlines() ;
+
+});
+
+document.getElementById('root').appendChild(input);
+document.getElementById('root').appendChild(button);
