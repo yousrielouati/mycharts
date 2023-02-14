@@ -33,6 +33,7 @@ const year2 = [
   ];
 
 
+// to extract the max and min values from the sets
 const extractBounds=(set1 , set2)=>{
     let arr1 = set1.map(({ population }) => population)
     let arr2 = set2.map(({ population }) => population)
@@ -43,6 +44,7 @@ const extractBounds=(set1 , set2)=>{
 }
 extractBounds(year1,year2)
 
+//
 function generateChart(data , offset , classname) {
   const barChartElems = [];
   const create = (d) => {
